@@ -1,0 +1,6 @@
+use_frameworks!
+target 'XMUtil_Tests' do
+  pod 'XMUtil', :path => '../'
+  
+  
+end
