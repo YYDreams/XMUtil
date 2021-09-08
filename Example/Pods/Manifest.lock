@@ -1,0 +1,16 @@
+PODS:
+  - XMUtil (0.1.0)
+
+DEPENDENCIES:
+  - XMUtil (from `../`)
+
+EXTERNAL SOURCES:
+  XMUtil:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  XMUtil: 9a83cfdfff0000a19d7d6a60bb12929018819a59
+
+PODFILE CHECKSUM: f57d4453d1cc28acf6cc5a6fe93aca0ff15c4336
+
+COCOAPODS: 1.10.1
