@@ -66,6 +66,21 @@ public var kSafeAreaBottom: CGFloat {
     }
 }
 
+/// 5的手机才做比例
+public let XE5WidthScale : CGFloat = kScreenWidth < 375.0 ? (kScreenWidth / 375.0) : 1.0
+public let XE5HeightScale : CGFloat = kScreenHeight < 667 ? (kScreenHeight / 667) : 1.0
+
+/// 是否是 iPhone5 及以下的小屏幕
+public let XEiSiPhone5 : Bool = (kScreenWidth < 375.0) ? true : false
+
+public func FixH(height:CGFloat) -> CGFloat {
+    return height * XE5HeightScale
+}
+
+public func FixW(width:CGFloat) -> CGFloat {
+    return width * XE5WidthScale
+}
+
 /** 判断是不是iPhone X 机型 */
 // 或者 UIApplication.shared.statusBarFrame.height 状态栏的高，普通手机 20.0  .iPhoneX > 20 = 44.0
 public var isIPhoneX: Bool {
@@ -159,11 +174,11 @@ public func kTableViewChangeSeparatorPace(_ tableViewCell:UITableViewCell, _ edg
     }
 }
 
-public extension Collection {
-    
-    subscript(safe index: Index) -> Element? {
-        return indices.contains(index) ? self[index] : nil
-    }
-    
-}
+//public extension Collection {
+//    
+//    subscript(safe index: Index) -> Element? {
+//        return indices.contains(index) ? self[index] : nil
+//    }
+//    
+//}
 
